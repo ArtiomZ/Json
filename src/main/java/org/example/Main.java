@@ -11,5 +11,10 @@ public class Main {
         List<Employee> list = convert.parseCSV(columnMapping, fileName);
         String str = convert.listToJson(list);
         convert.writeString(str);
+
+        List<Employee> xml = convert.parseXML("data.xml");
+        String str2 = convert.listToJson(xml);
+        convert.writeString(str2);
+
     }
 }
